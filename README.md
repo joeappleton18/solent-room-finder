@@ -1,6 +1,6 @@
 # Class Example
 
-This is an ongoing project that will be used to support Solent's level 6 DevOps module. 
+This is an ongoing project that will be used to support Solent's level 6 DevOps module.
 
 ## Getting Started
 
@@ -12,10 +12,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Team Members
 
-
-
-
-
-
-
+Cristian Anton Frincu
