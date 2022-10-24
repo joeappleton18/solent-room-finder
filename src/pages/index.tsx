@@ -59,7 +59,7 @@ export default function Home({rooms}) {
                   .filter((r) => r.capacity >= capacity)
                   .map((r, i) => (
                     <tr
-                      key={r.id}
+                      key={r._id}
                       className={(i + 1) % 2 === 0 ? "bg-gray-100" : ""}
                     >
                       <td className="p-2 text-blue rounded-l-lg">
@@ -118,7 +118,8 @@ export default function Home({rooms}) {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  dbConnect();
+  await dbConnect();
+
   const results = await Room.find({}).lean();
   const rooms = results.map((doc) => ({
     ...doc,
