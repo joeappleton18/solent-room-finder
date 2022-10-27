@@ -1,5 +1,5 @@
 import {CloudUploadIcon} from "@heroicons/react/outline";
-import {buildings} from "../mocks/data";
+import {buildings, roomTypes} from "../mocks/data";
 
 
 
@@ -23,6 +23,22 @@ export default function RoomForm() {
               <label className="text-sm">
                 {b.name} ({b.code})
               </label>
+            </div>
+          ))}
+        </>
+        
+         <label className="font-semibold"> Room Type</label>
+        <>
+          {roomTypes.map((b, i) => (
+            <div key={i} className="flex space-x-2">
+              <input
+                {...register("type", {required: true})}
+                type="radio"
+                value={b.code}
+                data-test="room-input"
+                name="type"
+              ></input>
+              <label className="text-sm">{b.name}</label>
             </div>
           ))}
         </>
