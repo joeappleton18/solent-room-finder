@@ -12,6 +12,8 @@ tsconfig.tsbuildinfo
 /.next/
 /out/
 
+/cypress/videos/
+
 # production
 /build
 
@@ -33,3 +35,4 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+.env.test
