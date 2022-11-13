@@ -38,3 +38,7 @@ yarn-error.log*
  # Ignore cypress tests 
 
  /cypress/videos/
+cypress/videos/
+tsconfig.tsbuildinfo
+tsconfig.tsbuildinfo
+.env.test
