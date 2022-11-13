@@ -1,10 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+docs-build
+/cypress/videos/
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
-
+tsconfig.tsbuildinfo
 # testing
 /coverage
 
@@ -33,3 +34,4 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+.env.test
