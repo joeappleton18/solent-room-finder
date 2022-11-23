@@ -50,6 +50,7 @@ export default function Home({rooms}) {
       />
       <div className="min-w-full pr-20">
         <div className="max-w-[80%] mx-auto mt-11">
+          <h1>Rooms</h1> 
           <div>
             {session && (
               <Link href="/create">
