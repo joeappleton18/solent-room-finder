@@ -154,7 +154,6 @@ export default function Home({rooms}) {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   await dbConnect();
-  console.log(process.env.NODE_ENV);
   const results = await Room.find({}).lean();
   const rooms = results.map((doc) => ({
     ...doc,

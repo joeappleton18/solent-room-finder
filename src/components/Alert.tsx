@@ -35,8 +35,11 @@ export default function Alert(props: AlertProps) {
     >
       <strong className="font-bold">{label}</strong>
       <span
+        data-testid="close"
         className="absolute top-0 bottom-0 right-0 px-4 py-3"
-        onClick={() => setStartFade(true)}
+        onClick={() => {
+          setStartFade(true);
+        }}
       >
         <svg
           className={`fill-current h-6 w-6 cursor-pointer

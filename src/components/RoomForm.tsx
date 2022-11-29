@@ -32,7 +32,6 @@ export interface DatabaseRoomValues extends RoomValues {
 
 export default function RoomForm(props: RoomFormProps) {
   const {onSubmit, isLoading, triggerReset, values, label} = props;
-  console.log(values);
   const {
     register,
     handleSubmit,
@@ -115,7 +114,6 @@ export default function RoomForm(props: RoomFormProps) {
       )}
     >
       <div className="flex flex-col align-middle  space-y-2">
-        {JSON.stringify(photos)}
         {thumb && (
           <>
             <TrashIcon
@@ -156,7 +154,10 @@ export default function RoomForm(props: RoomFormProps) {
         </>
         <h3 className="font-bold text-red-600">
           {errors.building && (
-            <span data-test="building-error"> Building is required</span>
+            <span data-test="building-error" data-testid="error">
+              {" "}
+              Building is required
+            </span>
           )}
         </h3>
         <label className="font-semibold"> Room Type</label>
@@ -177,7 +178,10 @@ export default function RoomForm(props: RoomFormProps) {
         </>
         <h3 className="font-bold text-red-600">
           {errors.type && (
-            <span data-test="type-error"> Room type is required</span>
+            <span data-test="type-error" data-testid="error">
+              {" "}
+              Room type is required
+            </span>
           )}
         </h3>
         <label className="font-semibold"> Room Number</label>
@@ -191,7 +195,10 @@ export default function RoomForm(props: RoomFormProps) {
         />
         <h3 className="font-bold text-red-600">
           {errors.number && (
-            <span data-test="number-error"> Room number is required</span>
+            <span data-test="number-error" data-testid="error">
+              {" "}
+              Room number is required
+            </span>
           )}
         </h3>
         <label className="font-semibold"> Capacity </label>
@@ -205,12 +212,14 @@ export default function RoomForm(props: RoomFormProps) {
         />
         <h3 className="font-bold text-red-600">
           {errors.capacity?.type === "required" && (
-            <span data-test="capacity-error">Capacity is required</span>
+            <span data-test="capacity-error" data-testid="error">
+              Capacity is required
+            </span>
           )}
 
           {(errors.capacity?.type === "min" ||
             errors.capacity?.type === "max") && (
-            <span data-test="capacity-error">
+            <span data-test="capacity-error" data-testid="error">
               Capacity must be between 5 and 100
             </span>
           )}
