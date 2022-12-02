@@ -7,12 +7,12 @@ interface TypeInterface {
 
 export interface RoomInterface {
   _id?: string;
-  photos?: string[];
+  photos?: string | string[];
   number: string;
   building: string;
   capacity: number;
   notes?: string;
-  type: TypeInterface;
+  type: string | TypeInterface; // the reason we allow a string here is we need to represent type as a singular value in the form
 }
 /**
  *  id: string;

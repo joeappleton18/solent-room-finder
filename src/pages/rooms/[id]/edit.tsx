@@ -5,15 +5,13 @@ import dbConnect from "../../../../lib/dbConnect";
 import Room from "../../../../models/Room";
 import Alert from "../../../components/Alert";
 import BreadCrumb from "../../../components/BreadCrumb";
-import RoomForm, {
-  DatabaseRoomValues,
-  RoomValues,
-} from "../../../components/RoomForm";
+import RoomForm, {DatabaseRoomValues} from "../../../components/RoomForm";
 import useSession from "./../../../hooks/useNextAuth";
+import {RoomInterface} from "../../../../models/Room";
 
 export default function Edit({room}: {room: DatabaseRoomValues}) {
   const {isLoading, isSuccess, isError, mutate} = useMutation(
-    (updatedRoom: RoomValues) => {
+    (updatedRoom: RoomInterface) => {
       return axios.put(`/api/rooms/${room._id}`, updatedRoom);
     }
   );

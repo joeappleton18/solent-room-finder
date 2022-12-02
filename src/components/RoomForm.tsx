@@ -7,24 +7,17 @@ import {SpinnerCircular} from "spinners-react";
 import {buildings, roomTypes} from "../data/";
 import useCloudinary from "../hooks/useCloudinary";
 import useSession from "../hooks/useNextAuth";
+import {RoomInterface} from "../../models/Room";
 
 export interface RoomFormProps {
-  onSubmit: SubmitHandler<RoomValues>;
+  onSubmit: SubmitHandler<RoomInterface>;
   isLoading?: boolean;
   triggerReset?: boolean;
   values?: DatabaseRoomValues;
   label?: string;
 }
 
-export interface RoomValues {
-  number: string;
-  building: string;
-  capacity: number;
-  notes?: string;
-  type: string | {name: string; code: string};
-}
-
-export interface DatabaseRoomValues extends RoomValues {
+export interface DatabaseRoomValues extends RoomInterface {
   _id?: string;
   type: {name: string; code: string};
   photos: string[];
@@ -37,7 +30,10 @@ export default function RoomForm(props: RoomFormProps) {
     handleSubmit,
     formState: {errors},
     reset,
-  } = useForm<RoomValues>({
+
+    // the reason we set values type code here to a single value is  to allow it to be
+    // represented in the form.
+  } = useForm<RoomInterface>({
     defaultValues: {...values, ...{type: values ? values.type.code : ""}},
   });
 

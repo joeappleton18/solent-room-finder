@@ -2,12 +2,13 @@ import axios from "axios";
 import {useMutation} from "react-query";
 import Alert from "../components/Alert";
 import BreadCrumb from "../components/BreadCrumb";
-import RoomForm, {RoomValues} from "../components/RoomForm";
+import RoomForm from "../components/RoomForm";
+import {RoomInterface} from "../../models/Room";
 import useSession from "../hooks/useNextAuth";
 
 export default function Create() {
   const {isLoading, isSuccess, isError, mutate} = useMutation(
-    (room: RoomValues) => {
+    (room: RoomInterface) => {
       return axios.post("/api/rooms/", room);
     }
   );
@@ -29,7 +30,6 @@ export default function Create() {
           isLoading={isLoading}
           triggerReset={isSuccess}
           onSubmit={(room) => {
-            console.log(room);
             mutate(room);
           }}
         />
