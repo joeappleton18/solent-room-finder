@@ -8,3 +8,4 @@ echo "running pre-commit checks"
 npm run  prettier
 npm run types
 npm run lint
+npm run test:ci
