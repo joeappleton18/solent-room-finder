@@ -1,10 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+docs-build
+/cypress/videos/
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
-
+tsconfig.tsbuildinfo
 # testing
 /coverage
 
@@ -26,10 +27,14 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # local env files
-.env*.local
-
+.env.local
+.env.test
 # vercel
 .vercel
 
 # Local Netlify folder
 .netlify
+.env.test
+
+# Sentry
+.sentryclirc

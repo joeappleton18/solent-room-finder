@@ -1,4 +1,3 @@
-name: Checking Code Quality
 on: [push, pull_request] ## run on push and pulls
 jobs:
   eslint:
@@ -19,4 +18,6 @@ jobs:
         run: npm run prettier
       - name: Check Types
         run: npm run types
+      - name: Run Unit Tests
+        run: npm run test:ci
         continue-on-error: true
