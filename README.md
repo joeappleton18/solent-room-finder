@@ -1,24 +1,34 @@
-# Class Example
+<center> <h1> Solent Room Finder 🔍 </h1> </center>
 
 ![Integration Tests](https://github.com/joeappleton18/solent-room-finder/actions/workflows/cypress.yaml/badge.svg)
 
-[This project is a proof of concept room tracking application. Over the semester, I produced this application and supporting tutorials to showcase DevOps' best practices.]()
+This project is a proof of concept room tracking application. Over the semester, I produced this application and supporting tutorials to showcase DevOps' best practices.
 
+![](.github/product-demo.png)
 
+## Features
 
+### Technologies Used
 
-### Features 
+- Next.js
+- Next Auth
+- React Query
+- Express
+- MongoDB
 
-- Static code analysis 
-  - Prettier 
-  - ES Lint 
-- Storybook to support a component-driven development approach 
-- Testing 
-- Cypress and Jest 
+### DevOps
+
+- Static code analysis
+  - Prettier
+  - ES Lint
+- Storybook to support a component-driven development approach
+- Testing
+- Cypress and Jest
 - CD
   - Staging and main branch auto-deploy to Vercel
 - CI
-- Tests and static code analysis automatically run on push and pulls,  using GitHub actions
+  - Tests and static code analysis automatically run on push and pulls, using GitHub actions
+  - Code coverage
 
 ## Getting Started
 
@@ -45,4 +55,9 @@
 
 - Run the development server: `npm run dev`
 
-- **If you want to see the project stories**:, `npm run "storybook"`
+- **If you want to see the project stories**: `npm run "storybook"`
+- **If you want to run the tests**: `npm cypress:run`
+
+## Follow the tutorials
+
+[I have an accompanying tutorial for this project, should you want to follow along](https://joeappleton18.github.io/devops_2022_2023_notes/)
