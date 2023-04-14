@@ -2,7 +2,23 @@
 
 ![Integration Tests](https://github.com/joeappleton18/solent-room-finder/actions/workflows/cypress.yaml/badge.svg)
 
-This is an ongoing project that will be used to support Solent's level 6 DevOps module. It is a room tracking application created using Next.js.
+[This project is a proof of concept room tracking application. Over the semester, I produced this application and supporting tutorials to showcase DevOps' best practices.]()
+
+
+
+
+### Features 
+
+- Static code analysis 
+  - Prettier 
+  - ES Lint 
+- Storybook to support a component-driven development approach 
+- Testing 
+- Cypress and Jest 
+- CD
+  - Staging and main branch auto-deploy to Vercel
+- CI
+- Tests and static code analysis automatically run on push and pulls,  using GitHub actions
 
 ## Getting Started
 
