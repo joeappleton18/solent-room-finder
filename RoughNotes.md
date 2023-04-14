@@ -5,3 +5,5 @@
 - npx jest --coverage
 
 - https://docs.cypress.io/guides/tooling/code-coverage#E2E-code-coverage
+
+- https://sentry.io/solent-university-w0/javascript-nextjs/getting-started/javascript-nextjs/

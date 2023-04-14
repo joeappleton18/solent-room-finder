@@ -125,7 +125,16 @@ export default function Home({rooms}) {
                   ))}
               </tbody>
             </table>
+            <button
+              type="button"
+              onClick={() => {
+                throw new Error("Sentry Frontend Error");
+              }}
+            >
+              Throw error
+            </button>
             {/* <div className="mt-6 flex justify-between">
+            
               <h3 className="text-sm mt-5">
                 Showing <b>1</b> to <b>10</b> of <b>97</b> Results
               </h3>
